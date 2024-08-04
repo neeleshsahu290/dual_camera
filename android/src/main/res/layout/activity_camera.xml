@@ -1,0 +1,181 @@
+<!-- res/layout/activity_camera.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@android:color/black"
+    android:layout_height="match_parent" >
+
+
+    <ImageView
+        android:visibility="gone"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentTop="true"
+        android:id="@+id/camera_image"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/viewimage_layout"
+        android:layout_height="0dp" />
+    <androidx.camera.view.PreviewView
+        android:layout_marginTop="50dp"
+        android:layout_alignParentTop="true"
+        android:id="@+id/camera_frame"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/liner_layout"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:visibility="gone"
+
+        android:paddingHorizontal="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:foregroundGravity="center"
+        android:id="@+id/viewimage_layout"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center"
+            android:id="@+id/btn_ok"
+            android:layout_width="wrap_content"
+            android:textColor="@android:color/white"
+            android:src="@drawable/correct"
+            android:layout_height="wrap_content"/>
+
+
+
+
+
+        <ImageButton
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:id="@+id/btn_clear"
+            android:layout_width="wrap_content"
+            android:textColor="@android:color/white"
+            android:src="@drawable/wrong"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:paddingHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:foregroundGravity="center"
+        android:id="@+id/liner_layout"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:textSize="16sp"
+            android:id="@+id/cancel_btn"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:text="Cancel"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content"/>
+
+
+
+
+        <Button
+            android:clickable="true"
+            android:focusable="true"
+            android:text=""
+            android:layout_centerInParent="true"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:background="@drawable/ciecular_shape"
+            android:id="@+id/capture_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+
+            />
+
+        <ImageButton
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:id="@+id/camera_toggle"
+
+            android:layout_width="wrap_content"
+            android:textColor="@android:color/white"
+            android:src="@drawable/cameraswitch"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/progress_circular"
+
+        android:layout_width="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="#6BFFFFFF"
+
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:text="Creating Image"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textFontWeight="600"
+            android:layout_centerInParent="true"
+            android:id="@+id/progress_text"
+            android:layout_width="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content"/>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="50dp"
+
+            android:layout_height="50dp"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="355dp"
+            android:background="@drawable/ciecular_shape"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_below="@+id/progress_text"
+            android:layout_marginTop="10dp"
+
+
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text=""
+            android:visibility="visible" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+
+
+
